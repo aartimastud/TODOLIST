@@ -1,0 +1,264 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.blur{
+    
+    background: linear-gradient(rgb(255,255,255.0.5));
+    opacity: 0.10;
+}
+
+.main-container{
+    width: 700px;
+    height: 70vh;
+    position: relative;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.pheading{
+    width: 70%;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    line-height: 0.1em;
+    margin: 10px 0 10px;
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: auto;
+}
+
+.pheading .heading{
+    background-color: white;
+    padding: 20px 20px;
+}
+
+.card-container{
+    position: relative;
+    justify-content: space-around;
+}
+
+.cards{
+    width: 300px;
+    height: 290px;
+    border-radius: 7px;
+    border: 1px solid #e74c3c;
+    position: relative;
+    top: 2em;
+    margin: auto;
+    box-shadow: 2px 2px 7px 4px lightgray ;
+}
+
+.card-heading{
+    color: #e74c3c;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 10%;
+    margin-bottom: 10px;
+}
+
+hr{
+    max-width: 70%;
+    position: relative;
+    /* left:9%; */
+    margin-right:0%;
+}
+
+.para{
+    color: #e74c3c;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: line-through;
+    margin-top: 30px;
+    margin-bottom: 15px;    
+}
+
+.check{
+    margin-left: 10px;
+    position: relative;
+    left: 21%;
+}
+
+.pending{
+    padding: 3px;
+    position: relative;
+    left: 21%;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    
+}
+
+.page{
+    font-size: 18px;
+    font-weight: 300;
+    text-decoration: none;
+    position: relative;
+    left: 50%;
+    margin-top: 10px;
+    color: black;
+}
+
+.page:hover{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.fa{
+    color: #e74c3c;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.back{
+    font-size: 25px;
+    position: relative;
+    left: 40%;
+    top: 1em;
+}
+
+.arrow{
+    padding:1%;
+}
+
+.plus{
+    position: relative;
+    left: 44%;
+    top: 42%;
+}
+
+/* Page 3 */
+
+.page{
+    font-size: 18px;
+    font-weight: 300;
+    text-decoration: none;
+    position: relative;
+    left: 48%;
+    bottom: 10em;
+    color: black;
+}
+
+.page:hover{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* add new item */
+
+.add-newitem{
+    width: 400px;
+    height: 200px;
+    position: relative;
+    bottom: 14em;
+    margin: auto;
+    color:#e74c3c;
+    /* top:0em; */
+    border: 1px solid #e74c3c;
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px 5px lightgray ;
+    transition: 0.5s;
+}
+
+.add-newlist:hover{
+    width: 430px;
+    height: 210px;
+}
+
+.add-heading{
+    text-align: center;
+    padding: 1%;
+    font-size:1.4em;
+    margin-bottom: 0;
+}
+
+.input-box{
+    width: 70%;
+    height: 10%;
+    text-align: center;
+    position: relative;
+    border: 1px solid #e74c3c;
+    border-radius: 5px;
+    padding: 0.6em;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,50%);
+    outline: #e74c3c;
+    box-shadow: 2px 2px 7px 4px lightgray ;
+    transition: 0.5 s;
+}
+
+.input-box:active{
+    font-size: 1em;
+}
+
+.add-button{
+    width: 25%;
+    height: 18%;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,50%);
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 19px;
+    border: 1px solid #e74c3c;
+    outline: #e74c3c;
+    font-size: 1.1em;
+    transition: 0.5s;
+}
+
+.add-button:active{
+    width: 30%;
+    height: 20%;
+    background-color: #d82613;
+    cursor: pointer;
+}
+
+/* mobile responsive */
+
+@media screen and (max-width:700px) {
+
+    .pheading{
+        font-size: 2em;
+        position: relative;
+        right: 3em;
+
+    }
+
+    .back{
+        font-size: 1.4em;
+        position: relative;
+        left: 30%;
+        font-weight: 300;
+        /* top: -1em; */
+    }
+    
+    .cards{
+        width: 250px;
+        height: 290px;
+        right: 5em;
+        bottom: 5em;
+    }
+
+    .plus{
+        position: relative;
+        left: 32%;
+        /* top: 43%; */
+    }
+
+    .add-newitem{
+        width: 300px;
+        height: 150px;
+        bottom: 11em;
+        position: fixed;
+        left: 8em;
+    }
+
+    .page{
+        left: 43%;
+        top: 3em;
+    
+    }
+
+}
