@@ -12,19 +12,14 @@ body{
     margin: auto;
     align-items: center;
     top: 2em;
-}
-
-.blur{
-    opacity: 0.11;
-    text-shadow: 4px 2px 3px black;
-
+    filter: blur(0.2em);
 }
 
 .task-list{
     display: flex;
     justify-content: space-between;
     position: relative;
-    right: 9em;
+    right: 1em;
 }
 
 .bold-heading{
@@ -56,6 +51,7 @@ body{
 .card-container{
     position: relative;
     justify-content: space-around;
+    filter: blur(0.7em);
 }
 
 .cards{
@@ -127,27 +123,91 @@ hr{
     font-weight: 500;
 }
 
+/* add new list */
+
+.add-newlist{
+    width: 400px;
+    height: 200px;
+    /* background-color: coral; */
+    position: relative;
+    bottom: 5em;
+    margin: auto;
+    color:#e74c3c;
+    /* top:0em; */
+    border: 1px solid #e74c3c;
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px 5px lightgray ;
+    transition: 0.5s;
+}
+
+.add-newlist:hover{
+    width: 420px;
+    height: 220px;
+}
+
+.add-heading{
+    text-align: center;
+    padding: 1%;
+    font-size:1.4em;
+    margin-bottom: 0;
+}
+
+.input-box{
+    width: 70%;
+    height: 10%;
+    text-align: center;
+    position: relative;
+    border: 1px solid #e74c3c;
+    border-radius: 5px;
+    padding: 0.6em;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,50%);
+    outline: #e74c3c;
+    box-shadow: 2px 2px 7px 4px lightgray ;
+    transition: 0.5 s;
+}
+
+.input-box:active{
+    font-size: 1em;
+}
+
+.add-button{
+    width: 25%;
+    height: 18%;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,50%);
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 19px;
+    border: 1px solid #e74c3c;
+    outline: #e74c3c;
+    font-size: 1.1em;
+    transition: 0.5s;
+}
+
+.add-button:active{
+    width: 30%;
+    height: 20%;
+    background-color: #d82613;
+    cursor: pointer;
+}
+
 
 /* mobile responsive */
 
-@media screen and (max-width:850px) and (min-width:490px) {
+@media screen and (max-width:900px) and  (min-width:500px) {
 
     .outer-container{
         width: 400px;
-       
         display: flex;
         flex-direction: column;
         position: relative;
         margin: auto;
         align-items: center;
         top: 1.5em;
-    }
-
-    .task-list{
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        right: 8px;
     }
     
     .bold-heading{
@@ -201,6 +261,27 @@ hr{
         margin-left:3em;
         top: 8%;
     }
+
+    .add-newlist{
+        width: 300px;
+        height: 160px;
+        /* background-color: coral; */
+        position: relative;
+        bottom: 5em;
+        margin: auto;
+        color:#e74c3c;
+        /* top:0em; */
+        border: 1px solid #e74c3c;
+        border-radius: 10px;
+        left: 1.5em;
+        box-shadow: 2px 2px 7px 5px lightgray ;
+        transition: 0.5s;
+    }
+    
+    .add-newlist:hover{
+        width: 350px;
+        height: 180px;
+    }
     
 
     /* Page 2 */
@@ -219,85 +300,111 @@ hr{
     
 }  
 
+@media screen and (max-width:490px) {
 
+    .outer-container{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: auto;
+        align-items: center;
+        top: 1em;
+    }
 
+    .task-list{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        left: 2%;
+        bottom: 5%;
+    }
+    
+    .bold-heading{
+        font-size: 2em;
+        font-weight: 600;
+    }
 
+    .fa{
+        color: #e74c3c;
+        font-size: 27px;
+        font-weight: 100;
+        margin-top: 7px;
+    }
+    
+    .add-list{
+        font-size: 0em;
+        font-weight: 300;
+        position: relative;
+        padding-top: 30px;
+        margin-right: 25px;
+        left: 5em;
+    
+    }
 
+    
+    .card-container{        
+        justify-content: space-around;
+        bottom: 10%;
+    }
+    
+    .cards{
+        width: 200px;
+        height: 270px;
+        left: 13%;
+    }
+    
+    .card-one{
+        margin-left:3em;
+        top: 2%;
+    }
+    
+    .card-two{
+        margin-left: 3em;
+        top: 5%;
+    }
+    
+    .card-three{
+        margin-left:3em;
+        top: 8%;
+    }
 
+    .add-newlist{
+        width: 220px;
+        height: 130px;
+        left: 1.5em;
+    }
 
+    .add-newlist:hover{
+        width: 225px;
+        height: 135px;
+    }
 
-/* add new list */
+    .add-heading{   
+        font-size:1em;
+    }
 
-.add-newlist{
-    width: 400px;
-    height: 200px;
-    /* background-color: coral; */
-    position: relative;
-    bottom: 5em;
-    margin: auto;
-    color:#e74c3c;
-    /* top:0em; */
-    border: 1px solid #e74c3c;
-    border-radius: 10px;
-    box-shadow: 2px 2px 7px 5px lightgray ;
-    transition: 0.5s;
-}
+    .add-button{
+        width: 20%;
+        height: 18%;
+        font-size: 0.7em;
+    }   
 
-.add-newlist:hover{
-    width: 430px;
-    height: 210px;
-}
+    /* Page 2 */
+    .page{
+        font-size: 18px;
+        font-weight: 300;
+        text-decoration: none;
+        position: absolute;
+        left: 48%;
+        bottom: -0%;
+    }
 
-.add-heading{
-    text-align: center;
-    padding: 1%;
-    font-size:1.4em;
-    margin-bottom: 0;
-}
-
-.input-box{
-    width: 70%;
-    height: 10%;
-    text-align: center;
-    position: relative;
-    border: 1px solid #e74c3c;
-    border-radius: 5px;
-    padding: 0.6em;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%,50%);
-    outline: #e74c3c;
-    box-shadow: 2px 2px 7px 4px lightgray ;
-    transition: 0.5 s;
-}
-
-.input-box:active{
-    font-size: 1em;
-}
-
-.add-button{
-    width: 25%;
-    height: 18%;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%,50%);
-    background-color: #e74c3c;
-    color: white;
-    border-radius: 19px;
-    border: 1px solid #e74c3c;
-    outline: #e74c3c;
-    font-size: 1.1em;
-    transition: 0.5s;
-}
-
-.add-button:active{
-    width: 30%;
-    height: 20%;
-    background-color: #d82613;
-    cursor: pointer;
-}
-
+    .page:hover{
+        font-size: 20px;
+        font-weight: 500;
+    }
+}  
 
 
 

@@ -139,6 +139,10 @@ hr{
     font-weight: 500;
 }
 
+.mobile-hor{
+    visibility: hidden;
+}
+
 /* mobile responsive */
 @media screen and (max-width:650px) {
     .main-container{
@@ -159,6 +163,94 @@ hr{
 
     .fa{
         margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:490px) {
+    .main-container{
+        width: 500px;
+        height: 70vh;
+        position: relative;
+        margin: auto;
+        margin-top: 40px;
+    }
+
+    .mobile-pheading{
+        font-size: 1.7em;
+        font-weight: 700;
+    }
+
+    .mobile-hor{
+        visibility: visible;
+        position: relative;
+        bottom: 100%;
+        left: 42%;
+
+    } 
+    
+    .pheading{
+        visibility: hidden;
+    }
+    
+    .pheading .heading{
+        /* background-color: white; */
+        padding: 20px 20px;
+        font-size: 1em;
+        visibility: hidden;
+    }
+
+    .fa{
+        visibility: visible;
+        position: relative;
+        right: 13%;
+        bottom:27px;
+        font-size: 1.3em;
+    }
+    
+    .back{
+        visibility: hidden;
+    }
+    
+    .card-container{
+        position: relative;
+        justify-content: space-around;
+    }
+    
+    .cards{
+        width: 220px;
+        height: 300px;
+        border-radius: 7px;
+        border: 1px solid #e74c3c;
+        position: relative;
+        bottom:2em;
+        margin: auto;
+        box-shadow: 2px 2px 7px 4px lightgray ;
+    }
+    
+    .card-heading{
+        color: #e74c3c;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 400;
+        margin-top: 10%;
+        margin-bottom: 10px;
+    }
+    
+    .plus{
+        font-size: 1.8em;
+        position: relative;
+        left: 21%;
+        top: 45%;
+    }
+
+    .page{
+        position: absolute;
+        top: 95%;
+    }
+    
+    .page:hover{
+        font-size: 20px;
+        font-weight: 500;
     }
 }
 

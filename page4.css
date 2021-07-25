@@ -2,18 +2,13 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-.blur{
-    
-    background: linear-gradient(rgb(255,255,255.0.5));
-    opacity: 0.10;
-}
-
 .main-container{
     width: 700px;
     height: 70vh;
     position: relative;
     margin: auto;
     margin-top: 40px;
+    filter: blur(0.3em);
 }
 
 .pheading{
@@ -46,6 +41,7 @@ body{
     top: 2em;
     margin: auto;
     box-shadow: 2px 2px 7px 4px lightgray ;
+    filter: blur(0.7em);
 }
 
 .card-heading{
@@ -144,6 +140,10 @@ hr{
     font-weight: 500;
 }
 
+.mobile-hor{
+    visibility: hidden;
+}
+
 /* add new item */
 
 .add-newitem{
@@ -160,7 +160,7 @@ hr{
     transition: 0.5s;
 }
 
-.add-newlist:hover{
+.add-newitem:hover{
     width: 430px;
     height: 210px;
 }
@@ -217,48 +217,170 @@ hr{
 
 /* mobile responsive */
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:900px) and  (min-width:500px) {
+        .main-container{
+            position: fixed;
+            width: 500px;
+            height: 70vh;
+        }
 
-    .pheading{
-        font-size: 2em;
+        .cards{
+            width: 250px;
+            height: 290px;
+        }
+    
+        .cards{
+            top: -0.5em;
+            right: 1em;
+        }
+    
+    
+        .pheading{
+            font-size: 2em;
+            position: relative;
+            right: 10px;
+            top:10px;
+        }
+    
+        .fa{
+            margin-bottom: 20px;
+        }
+
+        .add-newitem{
+            width: 300px;
+            height: 160px;
+            position: absolute;
+            top: 40%;
+            left: 90px;
+        }
+        
+        .add-newitem:hover{
+            width: 320px !important;
+            height: 180px !important;
+        }
+
+        .plus{
+            position: relative;
+            left: 30%;
+            top: 42%;
+        }
+        
+        /* Page 2 */
+    
+        .page{
+            left: 45%;
+            top: 25em;
+        }
+}
+
+@media screen and (max-width:490px) {
+    .main-container{
+        width: 500px;
+        height: 70vh;
         position: relative;
-        right: 3em;
-
+        margin: auto;
+        margin-top: 40px;
+        filter: blur(0.2em);
     }
 
-    .back{
-        font-size: 1.4em;
+    .mobile-pheading{
+        font-size: 2em;
+        font-weight: 700;
+    }
+
+    .mobile-hor{
+        visibility: visible;
         position: relative;
-        left: 30%;
-        font-weight: 300;
-        /* top: -1em; */
+        left: 25%;
+
+    } 
+    
+    .pheading{
+        visibility: hidden;
+    }
+    
+    .pheading .heading{
+        /* background-color: white; */
+        padding: 20px 20px;
+        font-size: 1em;
+        bottom: -10em;
+        left: -5em;
+        visibility: hidden;
+    }
+
+    .fa{
+        visibility: visible;
+        position: relative;
+        right: 25%;
+        bottom:105px;
+        font-size: 1.3em;
+    }
+    
+    .back{
+        visibility: hidden;
+    }
+    
+    .card-container{
+        position: relative;
+        justify-content: space-around;
     }
     
     .cards{
-        width: 250px;
-        height: 290px;
-        right: 5em;
-        bottom: 5em;
-    }
-
-    .plus{
+        width: 260px;
+        height: 380px;
+        border-radius: 7px;
+        border: 1px solid #f03723;
         position: relative;
-        left: 32%;
-        /* top: 43%; */
+        margin: auto;
+        top: -12%;
+        right: 11%;
+        box-shadow: 2px 2px 7px 4px lightgray ;
+    }
+    
+    .card-heading{
+        color: #e74c3c;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 400;
+        margin-top: 10%;
+        margin-bottom: 10px;
+    }
+    
+    .plus{
+        font-size: 1.8em;
+        position: relative;
+        left: 21%;
+        top: 45%;
     }
 
     .add-newitem{
-        width: 300px;
+        width: 240px;
         height: 150px;
-        bottom: 11em;
-        position: fixed;
-        left: 8em;
+        left: 1.5em;
     }
+
+    .add-newitem:hover{
+        width: 260px !important;
+        height: 160px !important;
+    }
+
+    .add-heading{   
+        font-size:1em;
+    }
+
+    .add-button{
+        width: 20%;
+        height: 18%;
+        font-size: 0.7em;
+    }   
 
     .page{
-        left: 43%;
-        top: 3em;
-    
+        position: absolute;
+        top: 75%;
     }
-
+    
+    .page:hover{
+        font-size: 20px;
+        font-weight: 500;
+    }
 }
